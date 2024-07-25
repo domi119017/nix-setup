@@ -63,7 +63,7 @@
     # Available through 'home-manager --flake .#your-username@your-hostname'
     homeConfigurations = {
       "delta@delta-surface" = home-manager.lib.homeManagerConfiguration {
-        pkgs = import nixpkgs { system = "x86_64-linux"; config = { allowUnfree = true; \* and other options you want*\ }; };
+        pkgs = import nixpkgs { system = "x86_64-linux"; config = { allowUnfree = true; }; };
         extraSpecialArgs = {inherit inputs outputs;};
         modules = [
           # > Our main home-manager configuration file <
