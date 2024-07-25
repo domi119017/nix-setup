@@ -163,7 +163,7 @@
       ll = "ls -l";
       update = "sudo nixos-rebuild switch --flake ~/nix-setup#delta-surface";
       update-home = "home-manager switch --flake ~/nix-setup#delta@delta-surface";
-      upnix = "sh -c 'cd ~/nix-setup; git pull && update && update-home && gnome-session-quit --logout --force --no-prompt'";
+      upnix = "cd ~/nix-setup; git pull && update && update-home && gnome-session-quit --logout --force --no-prompt;";
       zrc = "nano ~/.zshrc";
       hwk = "ssh pi@192.168.178.130";
       opn = "ssh pi@192.168.178.81";
