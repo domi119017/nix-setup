@@ -88,7 +88,7 @@
 
     cursorTheme = {
       name = "Numix-Cursor";
-      package = pkgs.numix-cursor-theme;
+      package = pkgs.posy-cursors;
     };
 
     gtk3.extraConfig = {
