@@ -138,6 +138,7 @@
         "org.gnome.Console.desktop" 
         "code.desktop" 
         "firefox.desktop" 
+        "obsidian.desktop"
       ];
     };
     "org/gnome/shell/extensions/user-theme"={

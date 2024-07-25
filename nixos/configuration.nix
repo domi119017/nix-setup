@@ -143,6 +143,7 @@
     zsh
     zsh-powerlevel10k
     gnome3.gnome-tweaks
+    obsidian
   ];
   programs.zsh.enable = true;
   # Some programs need SUID wrappers, can be configured further or are
