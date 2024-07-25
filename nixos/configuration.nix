@@ -141,7 +141,8 @@
     tree
     home-manager
     zsh
-    zsh-powerlevel10k    
+    zsh-powerlevel10k
+    gnome3.gnome-tweaks
   ];
   programs.zsh.enable = true;
   # Some programs need SUID wrappers, can be configured further or are
