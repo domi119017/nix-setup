@@ -38,6 +38,7 @@
     posy-cursors
     papirus-icon-theme
     palenight-theme
+    dracula-theme
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
