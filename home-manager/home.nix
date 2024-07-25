@@ -35,6 +35,9 @@
     #   echo "Hello, ${config.home.username}!"
     # '')
     gnomeExtensions.user-themes
+    posy-cursors
+    papirus-icon-theme
+    palenight-theme
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -87,7 +90,7 @@
     };
 
     cursorTheme = {
-      name = "Numix-Cursor";
+      name = "Posy-Cursors";
       package = pkgs.posy-cursors;
     };
 
