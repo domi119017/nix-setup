@@ -20,9 +20,6 @@
   home.packages = with pkgs; [
     gnomeExtensions.user-themes
     gnomeExtensions.vitals
-    gnomeExtensions.gsconnect
-    gnomeExtensions.dash-to-dock
-    gnomeExtensions.sound-output-device-chooser
     posy-cursors
     candy-icons
     dracula-theme
@@ -134,11 +131,7 @@
       disable-user-extensions = false;
       enabled-extensions = [ 
         "user-theme@gnome-shell-extensions.gcampax.github.com" 
-        "trayIconsReloaded@selfmade.pl"
         "Vitals@CoreCoding.com"
-        "dash-to-dock@michleg.github.com"
-        "sound-output-device-chooser@kgshank.net"
-        "gnome-shell-extension-gsconnect@GSConnect.github.com"
       ];
       favorite-apps = [ 
         "org.gnome.Nautilus.desktop" 
