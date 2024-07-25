@@ -75,6 +75,13 @@
     # EDITOR = "emacs";
   };
 
+  home.pointerCursor = {
+    name = "Posy-Cursors";
+    package = pkgs.posy-cursors;
+    size = 48;
+    gtk.enable = true;
+  };
+
   # GNOME/GTK
   gtk = {
     enable = true;
@@ -87,11 +94,6 @@
     theme = {
       name = "palenight";
       package = pkgs.palenight-theme;
-    };
-
-    cursorTheme = {
-      name = "Posy-Cursors";
-      package = pkgs.posy-cursors;
     };
 
     gtk3.extraConfig = {
