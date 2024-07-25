@@ -35,7 +35,6 @@
     #   echo "Hello, ${config.home.username}!"
     # '')
     gnomeExtensions.user-themes
-    zsh-powerlevel10k
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -51,7 +50,6 @@
     #   org.gradle.console=verbose
     #   org.gradle.daemon.idletimeout=3600000
     # '';
-    ".p10k.zsh".text = builtins.readFile ./p10k.zsh;
   };
 
   # Home Manager can also manage your environment variables through
@@ -176,12 +174,6 @@
     history = {
       size = 10000;
       path = "${config.xdg.dataHome}/zsh/history";
-    };
-
-    oh-my-zsh = {
-      enable = true;
-      plugins = [ "git" "thefuck" "powerlevel10k" ];
-      theme = "powerlevel10k/powerlevel10k";
     };
   };
 
