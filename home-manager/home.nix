@@ -178,7 +178,7 @@
 
     oh-my-zsh = {
       enable = true;
-      plugins = [ "git" "thefuck" ];
+      plugins = [ "git" "thefuck" "powerlevel10k" ];
       theme = "powerlevel10k/powerlevel10k";
     };
   };
