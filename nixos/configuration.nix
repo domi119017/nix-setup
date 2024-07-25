@@ -78,7 +78,7 @@
     # gnome.calendar 
     # gnome.clocks 
     # gnome.contacts
-    # gnome.maps 
+    maps 
     # gnome.music 
     # gnome.photos 
     # gnome.system-monitor 
