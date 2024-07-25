@@ -175,6 +175,12 @@
       size = 10000;
       path = "${config.xdg.dataHome}/zsh/history";
     };
+
+    oh-my-zsh = {
+      enable = true;
+      theme = "powerlevel10k/powerlevel10k";
+      plugins = [ "git" "zsh-autosuggestions" "zsh-syntax-highlighting" ];
+    };
   };
 
   # Let Home Manager install and manage itself.
