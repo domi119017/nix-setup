@@ -75,7 +75,7 @@
     gnome.yelp
     gnome.evince
     gnome.seahorse
-    gnome-calendar 
+    # gnome-calendar 
     gnome-clocks 
     gnome-contacts
     gnome-maps 
