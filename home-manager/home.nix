@@ -76,9 +76,9 @@
   };
 
   home.pointerCursor = {
-    name = "Posy_Cursor";
+    name = "Posy_Cursor_Black";
     package = pkgs.posy-cursors;
-    size = 48;
+    size = 32;
     gtk.enable = true;
   };
 
