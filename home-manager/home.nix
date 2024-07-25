@@ -18,23 +18,11 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
-    # # Adds the 'hello' command to your environment. It prints a friendly
-    # # "Hello, world!" when run.
-    # pkgs.hello
-
-    # # It is sometimes useful to fine-tune packages, for example, by applying
-    # # overrides. You can do that directly here, just don't forget the
-    # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
-    # # fonts?
-    # (pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
-
-    # # You can also create simple shell scripts directly inside your
-    # # configuration. For example, this adds a command 'my-hello' to your
-    # # environment:
-    # (pkgs.writeShellScriptBin "my-hello" ''
-    #   echo "Hello, ${config.home.username}!"
-    # '')
     gnomeExtensions.user-themes
+    gnomeExtensions.vitals
+    gnomeExtensions.gsconnect
+    gnomeExtensions.dash-to-dock
+    gnomeExtensions.sound-output-device-chooser
     posy-cursors
     candy-icons
     dracula-theme
@@ -146,6 +134,11 @@
       disable-user-extensions = false;
       enabled-extensions = [ 
         "user-theme@gnome-shell-extensions.gcampax.github.com" 
+        "trayIconsReloaded@selfmade.pl"
+        "Vitals@CoreCoding.com"
+        "dash-to-dock@michleg.github.com"
+        "sound-output-device-chooser@kgshank.net"
+        "gnome-shell-extension-gsconnect@GSConnect.github.com"
       ];
       favorite-apps = [ 
         "org.gnome.Nautilus.desktop" 
