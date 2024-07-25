@@ -155,7 +155,7 @@
       ];
     };
     "org/gnome/shell/extensions/user-theme"={
-      name="palenight";
+      name="dracula";
     };
   };
 
