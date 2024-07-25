@@ -163,12 +163,22 @@
     # promptInit = "source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
     shellAliases = {
       ll = "ls -l";
-      update = "sudo nixos-rebuild switch";
+      update = "sudo nixos-rebuild switch --flake ~/nix-setup#delta-surface";
+      zrc = "nano ~/.zshrc";
+      hwk = "ssh pi@192.168.178.130";
+      opn = "ssh pi@192.168.178.81";
+      e = "exit";
     };
 
     history = {
       size = 10000;
       path = "${config.xdg.dataHome}/zsh/history";
+    };
+
+    oh-my-zsh = {
+      enable = true;
+      plugins = [ "git" "thefuck" ];
+      theme = "powerlevel10k/powerlevel10k";
     };
   };
 
