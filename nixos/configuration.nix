@@ -67,7 +67,11 @@
   services.xserver.desktopManager.gnome.enable = true;
   services.xserver.excludePackages = [ pkgs.xterm ];
   services.xserver.desktopManager.xterm.enable = false;
-  environment.gnome.excludePackages = [ pkgs.gnome-tour ];
+  environment.gnome.excludePackages = with pkgs; [ 
+    gnome-tour
+    gnome.geary
+    gnome.epiphany
+  ]; # Maps, Web, Geary, contacts, weather
   # Configure keymap in X11
   services.xserver.xkb.layout = "de";
   # services.xserver.xkb.options = "eurosign:e,caps:escape";
