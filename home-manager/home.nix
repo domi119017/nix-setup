@@ -36,8 +36,7 @@
     # '')
     gnomeExtensions.user-themes
     posy-cursors
-    papirus-icon-theme
-    palenight-theme
+    candy-icons
     dracula-theme
   ];
 
@@ -88,12 +87,12 @@
     enable = true;
 
     iconTheme = {
-      name = "Papirus-Dark";
-      package = pkgs.papirus-icon-theme;
+      name = "candy-icons";
+      package = pkgs.candy-icons;
     };
 
     theme = {
-      name = "dracula";
+      name = "Dracula";
       package = pkgs.dracula-theme;
     };
 
@@ -156,7 +155,7 @@
       ];
     };
     "org/gnome/shell/extensions/user-theme"={
-      name="dracula";
+      name="Dracula";
     };
   };
 
