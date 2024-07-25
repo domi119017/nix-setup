@@ -51,6 +51,7 @@
     #   org.gradle.console=verbose
     #   org.gradle.daemon.idletimeout=3600000
     # '';
+    ".p10k.zsh".text = builtins.readFile ./p10k.zsh;
   };
 
   # Home Manager can also manage your environment variables through
