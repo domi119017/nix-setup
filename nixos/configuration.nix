@@ -79,7 +79,7 @@
     # gnome.clocks 
     # gnome.contacts
     # gnome.maps 
-    gnome.music 
+    # gnome.music 
     gnome.photos 
     gnome.system-monitor 
     gnome.weather 
