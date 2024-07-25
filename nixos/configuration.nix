@@ -68,9 +68,10 @@
   services.xserver.excludePackages = [ pkgs.xterm ];
   services.xserver.desktopManager.xterm.enable = false;
   environment.gnome.excludePackages = with pkgs; [ 
+    gedit
+    
     gnome.geary
     gnome.epiphany
-    gnome.gedit
     gnome.totem
     gnome.yelp
     gnome.evince
