@@ -178,8 +178,8 @@
 
     oh-my-zsh = {
       enable = true;
-      theme = "powerlevel10k/powerlevel10k";
-      plugins = [ "git" "zsh-autosuggestions" "zsh-syntax-highlighting" ];
+      theme = "agnoster";
+      plugins = [ "git" ];
     };
   };
 
