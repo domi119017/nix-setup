@@ -68,11 +68,19 @@
   services.xserver.excludePackages = [ pkgs.xterm ];
   services.xserver.desktopManager.xterm.enable = false;
   environment.gnome.excludePackages = with pkgs; [ 
-    gnome-tour
     gnome.geary
     gnome.epiphany
-  ]; # Maps, Web, Geary, contacts, weather
+    gnome.gedit
+    gnome.totem
+    gnome.yelp
+    gnome.evince
+    gnome.seahorse
+    gnome-calendar gnome-clocks gnome-contacts
+    gnome-maps gnome-music gnome-photos 
+    gnome-system-monitor gnome-weather gnome-tour
+  ];
 
+  # All possible excludes:
   # environment.gnome.excludePackages = with pkgs.gnome; [
   #   baobab      # disk usage analyzer
   #   cheese      # photo booth
