@@ -75,15 +75,15 @@
     gnome.yelp
     gnome.evince
     gnome.seahorse
-    # gnome-calendar 
-    gnome-clocks 
-    gnome-contacts
-    gnome-maps 
-    gnome-music 
-    gnome-photos 
-    gnome-system-monitor 
-    gnome-weather 
-    gnome-tour
+    gnome.calendar 
+    gnome.clocks 
+    gnome.contacts
+    gnome.maps 
+    gnome.music 
+    gnome.photos 
+    gnome.system-monitor 
+    gnome.weather 
+    gnome.tour
   ];
 
   # All possible excludes:
