@@ -80,9 +80,9 @@
     # gnome.contacts
     # gnome.maps 
     # gnome.music 
-    gnome.photos 
-    gnome.system-monitor 
-    gnome.weather 
+    # gnome.photos 
+    # gnome.system-monitor 
+    # gnome.weather 
     gnome-tour
   ];
 
