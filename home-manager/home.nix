@@ -164,6 +164,7 @@
     shellAliases = {
       ll = "ls -l";
       update = "sudo nixos-rebuild switch --flake ~/nix-setup#delta-surface";
+      update-home = "home-manager switch --flake ~/nix-setup#delta@delta-surface";
       zrc = "nano ~/.zshrc";
       hwk = "ssh pi@192.168.178.130";
       opn = "ssh pi@192.168.178.81";
