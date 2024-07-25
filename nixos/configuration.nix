@@ -77,7 +77,7 @@
     gnome.seahorse
     # gnome.calendar 
     # gnome.clocks 
-    gnome.contacts
+    # gnome.contacts
     gnome.maps 
     gnome.music 
     gnome.photos 
