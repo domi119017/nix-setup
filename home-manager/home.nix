@@ -92,8 +92,8 @@
     };
 
     theme = {
-      name = "palenight";
-      package = pkgs.palenight-theme;
+      name = "dracula";
+      package = pkgs.dracula-theme;
     };
 
     gtk3.extraConfig = {
