@@ -182,6 +182,40 @@
       PermitRootLogin = "no"; # "yes", "without-password", "prohibit-password", "forced-commands-only", "no"
     };
   };
+
+  # Syncthing
+  syncthing = {
+    enable = true;
+    user = "delta";
+    dataDir = "/home/delta/Sync";
+    configDir = "/home/myusername/Documents/.config/syncthing";
+    overrideDevices = true;     # overrides any devices added or deleted through the WebUI
+    overrideFolders = true;     # overrides any folders added or deleted through the WebUI
+    settings = {
+      devices = {
+        "hawking" = { id = config.sops.secrets.hawking_st_id; };
+      };
+      folders = {
+        "code" = {         # Name of folder in Syncthing, also the folder ID
+          path = "/home/delta/Sync/Code";    # Which folder to add to Syncthing
+          devices = [ "hawking" ];      # Which devices to share the folder with
+        };
+        "dokumente" = {
+          path = "/home/delta/Sync/Dokumente";
+          devices = [ "hawking" ];
+        };
+        "obsidian-vault" = {
+          path = "/home/delta/Sync/Obsidian-Vault";
+          devices = [ "hawking" ];
+        };
+        "mindustry" = {
+          path = "/home/delta/Sync/Mindustry";
+          devices = [ "hawking" ];
+        };
+      };
+    };
+  };
+
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
