@@ -176,7 +176,6 @@
   ];
   # Enable GNOME shell extensions management from Firefox.
   nixpkgs.config.firefox.enableGnomeExtensions = true;
-  services.gnome.chrome-gnome-shell.enable = true;
 
   fonts.packages = with pkgs; [
     # Jet Brains Mono NF
