@@ -85,6 +85,21 @@
       enable-hot-corners = false;
       show-battery-percentage = true;
     };
+    "org/gnome/desktop/background" = {
+      color-shading-type ="solid";
+      picture-options ="zoom";
+      picture-uri ="file:///home/delta/Pictures/Wallpapers/dracula-mnt-282a36.png";
+      picture-uri-dark ="file:///home/delta/Pictures/Wallpapers/dracula-mnt-282a36.png";
+      primary-color ="#000000000000";
+      secondary-color ="#000000000000";
+    };
+    "org/gnome/desktop/screensaver" = {
+      color-shading-type ="solid";
+      picture-options ="zoom";
+      picture-uri ="file:///home/delta/Pictures/Wallpapers/dracula-mnt-282a36.png";
+      primary-color ="#000000000000";
+      secondary-color ="#000000000000";
+    };
     "org/gnome/desktop/notifications" = {
       show-banners = false;
     };
