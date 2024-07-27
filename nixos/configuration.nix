@@ -169,7 +169,6 @@
     sops
     thefuck
     syncthing
-    syncthing-tray
   ];
 
   fonts.packages = with pkgs; [
@@ -205,7 +204,7 @@
     overrideFolders = true;     # overrides any folders added or deleted through the WebUI
     settings = {
       devices = {
-        "hawking" = { id = config.sops.templates."hawking_st_id".content; };
+        "hawking" = { id = "BONLP32-SGBSCTK-7U4N2IN-NRX6CCN-76ZXZ6P-4M2GFBM-T4RYG4X-PZY47AZ"; };
       };
       folders = {
         "code" = {         # Name of folder in Syncthing, also the folder ID
@@ -226,8 +225,8 @@
         };
       };
       gui = {
-        user = config.sops.templates."st_username".content;
-        password = config.sops.templates."st_passwd".content;
+        user = domi;
+        password = domi;
       };
     };
   };
