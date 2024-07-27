@@ -1,22 +1,14 @@
 { config, pkgs, ... }:
 
 {
-  # Home Manager needs a bit of information about you and the paths it should
-  # manage.
+  # USER
   home.username = "delta";
   home.homeDirectory = "/home/delta";
 
-  # This value determines the Home Manager release that your configuration is
-  # compatible with. This helps avoid breakage when a new Home Manager release
-  # introduces backwards incompatible changes.
-  #
-  # You should not change this value, even if you update Home Manager. If you do
-  # want to update the value, then make sure to first check the Home Manager
-  # release notes.
+  # DO NOT CHANGE, READ DOCS
   home.stateVersion = "24.05"; # Please read the comment before changing.
 
-  # The home.packages option allows you to install Nix packages into your
-  # environment.
+  # HOME PACKAGES
   home.packages = with pkgs; [
     gnomeExtensions.user-themes
     gnomeExtensions.vitals
@@ -25,41 +17,20 @@
     dracula-theme
   ];
 
-  # Home Manager is pretty good at managing dotfiles. The primary way to manage
-  # plain files is through 'home.file'.
+  # DOTFILES
   home.file = {
-    # # Building this configuration will create a copy of 'dotfiles/screenrc' in
-    # # the Nix store. Activating the configuration will then make '~/.screenrc' a
-    # # symlink to the Nix store copy.
-    # ".screenrc".source = dotfiles/screenrc;
-
-    # # You can also set the file content immediately.
-    # ".gradle/gradle.properties".text = ''
-    #   org.gradle.console=verbose
-    #   org.gradle.daemon.idletimeout=3600000
-    # '';
+    ".oh-my-zsh" = {
+      source = ../dotfiles/.oh-my-zsh;
+      recursive = true;
+    };
   };
 
-  # Home Manager can also manage your environment variables through
-  # 'home.sessionVariables'. These will be explicitly sourced when using a
-  # shell provided by Home Manager. If you don't want to manage your shell
-  # through Home Manager then you have to manually source 'hm-session-vars.sh'
-  # located at either
-  #
-  #  ~/.nix-profile/etc/profile.d/hm-session-vars.sh
-  #
-  # or
-  #
-  #  ~/.local/state/nix/profiles/profile/etc/profile.d/hm-session-vars.sh
-  #
-  # or
-  #
-  #  /etc/profiles/per-user/delta/etc/profile.d/hm-session-vars.sh
-  #
+  # SESSION VARIABLES
   home.sessionVariables = {
     # EDITOR = "emacs";
   };
 
+  # POSYS CURSOR
   home.pointerCursor = {
     name = "Posy_Cursor_Black";
     package = pkgs.posy-cursors;
@@ -71,6 +42,7 @@
   gtk = {
     enable = true;
 
+    # THEME
     iconTheme = {
       name = "candy-icons";
       package = pkgs.candy-icons;
@@ -81,6 +53,7 @@
       package = pkgs.dracula-theme;
     };
 
+    # DARKMODE
     gtk3.extraConfig = {
       Settings = ''
         gtk-application-prefer-dark-theme=1
@@ -94,8 +67,7 @@
     };
   };
 
-  # dconf
-
+  # DCONF
   dconf.settings = {
     "org/gnome/desktop/interface" = {
       color-scheme = "prefer-dark";
@@ -146,35 +118,36 @@
     };
   };
 
-  # ZSH config
-  programs.zsh = {
-    enable = true;
-    enableCompletion = true;
-    autosuggestion.enable = true;
-    syntaxHighlighting.enable = true;
-    # promptInit = "source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
-    shellAliases = {
-      ll = "ls -l";
-      update = "sudo nixos-rebuild switch --flake ~/nix-setup#delta-surface";
-      update-home = "home-manager switch --flake ~/nix-setup#delta@delta-surface";
-      upnix = "cd ~/nix-setup; git pull && update && update-home && gnome-session-quit --logout --force --no-prompt;";
-      zrc = "nano ~/.zshrc";
-      hwk = "ssh pi@192.168.178.130";
-      opn = "ssh pi@192.168.178.81";
-      e = "exit";
-    };
-
-    history = {
-      size = 10000;
-      path = "${config.xdg.dataHome}/zsh/history";
-    };
-
-    oh-my-zsh = {
-      enable = true;
-      theme = "agnoster";
-      plugins = [ "git" ];
-    };
-  };
+  # # DISABLED, USING DOTFILES INSTEAD
+  # # ZSH config
+  # programs.zsh = {
+  #   enable = true;
+  #   enableCompletion = true;
+  #   autosuggestion.enable = true;
+  #   syntaxHighlighting.enable = true;
+  #   # promptInit = "source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
+  #   shellAliases = {
+  #     ll = "ls -l";
+  #     update = "sudo nixos-rebuild switch --flake ~/nix-setup#delta-surface";
+  #     update-home = "home-manager switch --flake ~/nix-setup#delta@delta-surface";
+  #     upnix = "cd ~/nix-setup; git pull && update && update-home && gnome-session-quit --logout --force --no-prompt;";
+  #     zrc = "nano ~/.zshrc";
+  #     hwk = "ssh pi@192.168.178.130";
+  #     opn = "ssh pi@192.168.178.81";
+  #     e = "exit";
+  #   };
+  # 
+  #   history = {
+  #     size = 10000;
+  #     path = "${config.xdg.dataHome}/zsh/history";
+  #   };
+  # 
+  #   oh-my-zsh = {
+  #     enable = true;
+  #     theme = "agnoster";
+  #     plugins = [ "git" ];
+  #   };
+  # };
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
