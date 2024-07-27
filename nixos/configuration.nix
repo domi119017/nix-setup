@@ -144,6 +144,7 @@
     zsh-powerlevel10k
     gnome3.gnome-tweaks
     obsidian
+    sops
   ];
 
   fonts.packages = with pkgs; [
