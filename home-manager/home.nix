@@ -22,6 +22,9 @@
     ".zshrc" = {
       source = config.lib.file.mkOutOfStoreSymlink "/home/delta/nix-setup/nix-dotfiles/.zshrc";
     };
+    ".oh-my-zsh" = {
+      source = config.lib.file.mkOutOfStoreSymlink "/home/delta/nix-setup/nix-dotfiles/.oh-my-zsh";
+    };
   };
 
   # SESSION VARIABLES
