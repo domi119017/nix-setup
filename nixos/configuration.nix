@@ -11,7 +11,7 @@
       inputs.sops-nix.nixosModules.sops
     ];
 
-  sops.defaultSopsFile = ./secrets/secrets.yaml;
+  sops.defaultSopsFile = config.lib.file.mkOutOfStoreSymlink "/home/delta/nix-setup/secrets/secrets.yaml";
   sops.defaultSopsFormat = "yaml";
 
   sops.age.keyFile = /home/delta/.config/sops/age/keys.txt;
