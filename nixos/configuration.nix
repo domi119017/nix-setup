@@ -180,7 +180,11 @@
 
   programs.zsh.enable = true;
 
-  environment.loginShellInit = ''echo $(fortune | cowsay -f stegosaurus)'';
+  environment.loginShellInit = ''
+  if [ ! -t 1 ]; then
+  fortune | cowsay -f stegosaurus
+  fi
+  '';
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
