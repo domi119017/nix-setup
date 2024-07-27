@@ -18,10 +18,16 @@
   ];
 
   # DOTFILES
-  home.file."${config.home.homeDirectory}" = {
-    source = ../nix-dotfiles;
-    recursive = true;
-  };
+  home.file =
+  with pkgs; let
+    listFilesRecursive = dir: acc: lib.flatten (lib.mapAttrsToList
+      (k: v: if v == "regular" then "${acc}${k}" else listFilesRecursive dir "${acc}${k}/")
+      (builtins.readDir "${dir}/${acc}"));
+
+    toHomeFiles = dir:
+      builtins.listToAttrs
+        (map (x: { name = x; value = { source = "${dir}/${x}"; }; }) (listFilesRecursive dir ""));
+  in toHomeFiles ../nix-dotfiles;
 
   # SESSION VARIABLES
   home.sessionVariables = {
