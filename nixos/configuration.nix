@@ -171,6 +171,7 @@
     syncthing
     fortune
     cowsay
+    lolcat
   ];
 
   fonts.packages = with pkgs; [
