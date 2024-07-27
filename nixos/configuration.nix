@@ -25,6 +25,14 @@
     st_username = {};
   };
 
+  sops.templates = {
+    "ssh_key".content = ''${config.sops.placeholder.ssh_key}'';
+    "hawking_st_id".content = ''${config.sops.placeholder.hawking_st_id}'';
+    "st_passwd".content = ''${config.sops.placeholder.st_passwd}'';
+    "st_username".content = ''${config.sops.placeholder.st_username}'';
+  };
+
+
   nixpkgs.config.allowUnfree = true;
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
@@ -195,7 +203,7 @@
     overrideFolders = true;     # overrides any folders added or deleted through the WebUI
     settings = {
       devices = {
-        "hawking" = { id = "$(cat ${config.sops.secrets.hawking_st_id.path})"; };
+        "hawking" = { id = config.sops.templates."hawking_st_id".content; };
       };
       folders = {
         "code" = {         # Name of folder in Syncthing, also the folder ID
@@ -216,8 +224,8 @@
         };
       };
       gui = {
-        user = "$(cat ${config.sops.secrets.st_username.path})";
-        password = "$(cat ${config.sops.secrets.st_passwd.path})";
+        user = config.sops.templates."st_username".content;
+        password = config.sops.templates."st_passwd".content;
       };
     };
   };
