@@ -151,6 +151,7 @@
     gnome3.gnome-tweaks
     obsidian
     sops
+    thefuck
   ];
 
   fonts.packages = with pkgs; [
