@@ -193,7 +193,7 @@
     overrideFolders = true;     # overrides any folders added or deleted through the WebUI
     settings = {
       devices = {
-        "hawking" = { id = "${config.sops.placeholder.hawking_st_id}"; };
+        "hawking" = { id = "${config.sops.secrets.hawking_st_id}"; };
       };
       folders = {
         "code" = {         # Name of folder in Syncthing, also the folder ID
