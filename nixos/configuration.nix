@@ -184,7 +184,7 @@
   };
 
   # Syncthing
-  syncthing = {
+  services.syncthing = {
     enable = true;
     user = "delta";
     dataDir = "/home/delta/Sync";
