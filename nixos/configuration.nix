@@ -21,6 +21,8 @@
     delta_passwd = {};
     admin_passwd = {};
     hawking_st_id = {};
+    st_passwd = {};
+    st_username = {};
   };
 
   nixpkgs.config.allowUnfree = true;
