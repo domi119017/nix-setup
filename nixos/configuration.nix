@@ -2,19 +2,13 @@
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
-{ config, lib, pkgs, sops-nix, ... }:
+{ config, lib, pkgs, ... }:
 
 {
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
     ];
-
-  sops.defaultSopsFile = config.lib.file.mkOutOfStoreSymlink ./secrets/secrets.yaml;
-  sops.age.keyFile = "/var/lib/sops-nix/key.txt";
-  sops.secrets.ssh_key = {};
-  sops.secrets.delta_passwd = {};
-  sops.secrets.admin_passwd = {};
 
   nixpkgs.config.allowUnfree = true;
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
