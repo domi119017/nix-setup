@@ -173,9 +173,10 @@
     cowsay
     lolcat
     openscad
+    gnome-browser-connector
   ];
   # Enable GNOME shell extensions management from Firefox.
-  nixpkgs.config.firefox.enableGnomeExtensions = true;
+  # nixpkgs.config.firefox.enableGnomeExtensions = true;
 
   fonts.packages = with pkgs; [
     # Jet Brains Mono NF
