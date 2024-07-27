@@ -84,6 +84,8 @@
       color-scheme = "prefer-dark";
       enable-hot-corners = false;
       show-battery-percentage = true;
+      font-name="Sans 11";
+      document-font-name="Sans 11";
     };
     "org/gnome/desktop/background" = {
       color-shading-type ="solid";
