@@ -172,6 +172,7 @@
     fortune
     cowsay
     lolcat
+    openscad
   ];
 
   fonts.packages = with pkgs; [
