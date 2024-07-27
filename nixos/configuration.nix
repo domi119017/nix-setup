@@ -168,6 +168,8 @@
     obsidian
     sops
     thefuck
+    syncthing
+    syncthing-tray
   ];
 
   fonts.packages = with pkgs; [
