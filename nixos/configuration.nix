@@ -214,10 +214,10 @@
           path = "/home/delta/Sync/Mindustry";
           devices = [ "hawking" ];
         };
-        gui = {
-          user = "$(cat ${config.sops.secrets.st_username.path})";
-          password = "$(cat ${config.sops.secrets.st_passwd.path})";
-        };
+      };
+      gui = {
+        user = "$(cat ${config.sops.secrets.st_username.path})";
+        password = "$(cat ${config.sops.secrets.st_passwd.path})";
       };
     };
   };
