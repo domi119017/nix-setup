@@ -162,10 +162,10 @@
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     git
     wget
-    firefox
+    # firefox
     tree
     home-manager
-    zsh
+    # zsh
     zsh-powerlevel10k
     gnome3.gnome-tweaks
     obsidian
