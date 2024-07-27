@@ -10,7 +10,7 @@
       ./hardware-configuration.nix
     ];
 
-  sops.defaultSopsFile = ./secrets/secrets.yaml;
+  sops.defaultSopsFile = config.lib.file.mkOutOfStoreSymlink ./secrets/secrets.yaml;
   sops.age.keyFile = "/var/lib/sops-nix/key.txt";
   sops.secrets.ssh_key = {};
   sops.secrets.delta_passwd = {};
