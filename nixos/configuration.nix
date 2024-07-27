@@ -169,6 +169,8 @@
     sops
     thefuck
     syncthing
+    fortune
+    cowsay
   ];
 
   fonts.packages = with pkgs; [
