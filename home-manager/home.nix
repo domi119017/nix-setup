@@ -127,7 +127,7 @@
     "org/gnome/shell/extensions/user-theme"={
       name="Dracula";
     };
-    "org/gnome/Console/"={
+    "org/gnome/Console"={
       custom-font="JetBrainsMonoNL Nerd Font Mono 10";
       audible-bell=false;
     };
