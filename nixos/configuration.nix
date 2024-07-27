@@ -188,12 +188,12 @@
     enable = true;
     user = "delta";
     dataDir = "/home/delta/Sync";
-    configDir = "/home/myusername/Documents/.config/syncthing";
+    configDir = "/home/delta/Documents/.config/syncthing";
     overrideDevices = true;     # overrides any devices added or deleted through the WebUI
     overrideFolders = true;     # overrides any folders added or deleted through the WebUI
     settings = {
       devices = {
-        "hawking" = { id = config.sops.secrets.hawking_st_id; };
+        "hawking" = { id = $(cat ${config.sops.secrets.hawking_st_id.path}); };
       };
       folders = {
         "code" = {         # Name of folder in Syncthing, also the folder ID
