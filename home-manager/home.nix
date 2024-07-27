@@ -128,6 +128,7 @@
       name="Dracula";
     };
     "org/gnome/Console"={
+      use-system-font=false;
       custom-font="JetBrainsMonoNL Nerd Font Mono 10";
       audible-bell=false;
     };
