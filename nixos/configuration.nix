@@ -20,6 +20,7 @@
     ssh_key = {};
     delta_passwd = {};
     admin_passwd = {};
+    hawking_st_id = {};
   };
 
   nixpkgs.config.allowUnfree = true;
