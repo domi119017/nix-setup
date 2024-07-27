@@ -18,11 +18,9 @@
   ];
 
   # DOTFILES
-  home.file = {
-    # ".oh-my-zsh" = {
-    #   source = ../nix-dotfiles/.oh-my-zsh;
-    #   recursive = true;
-    # };
+  home.file."${config.xdg.configHome}" = {
+    source = ../nix-dotfiles;
+    recursive = true;
   };
 
   # SESSION VARIABLES
