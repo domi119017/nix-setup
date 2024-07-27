@@ -20,7 +20,7 @@
   # DOTFILES
   home.file = {
     ".oh-my-zsh" = {
-      source = ../dotfiles/.oh-my-zsh;
+      source = ../nix-dotfiles/.oh-my-zsh;
       recursive = true;
     };
   };
