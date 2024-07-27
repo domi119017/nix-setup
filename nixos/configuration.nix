@@ -14,7 +14,7 @@
   sops.defaultSopsFile = ../secrets/secrets.yaml;
   sops.defaultSopsFormat = "yaml";
 
-  sops.age.keyFile = ../../.config/sops/age/keys.txt;
+  sops.age.keyFile = "/home/delta/.config/sops/age/keys.txt";
 
   sops.secrets = {
     ssh_key = {};
