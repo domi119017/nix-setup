@@ -11,6 +11,8 @@
     # Home manager
     home-manager.url = "github:nix-community/home-manager/release-24.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    # Sops
+    inputs.sops-nix.url = "github:Mic92/sops-nix";
   };
 
   outputs = {
@@ -55,6 +57,7 @@
         modules = [
           # > Our main nixos configuration file <
           ./nixos/configuration.nix
+          sops-nix.nixosModules.sops
         ];
       };
     };
