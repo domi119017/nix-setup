@@ -12,6 +12,7 @@
   home.packages = with pkgs; [
     gnomeExtensions.user-themes
     gnomeExtensions.vitals
+    gnomeExtensions.tiling-assistant
     posy-cursors
     candy-icons
     dracula-theme
@@ -135,6 +136,7 @@
       enabled-extensions = [ 
         "user-theme@gnome-shell-extensions.gcampax.github.com" 
         "Vitals@CoreCoding.com"
+        "tiling-assistant@leleat-on-github"
       ];
       favorite-apps = [ 
         "org.gnome.Nautilus.desktop" 
@@ -146,6 +148,9 @@
     };
     "org/gnome/shell/extensions/user-theme"={
       name="Dracula";
+    };
+    "org/gnome/shell/extensions/vitals"={
+      position-in-panel= 0;
     };
     "org/gnome/Console"={
       use-system-font=false;
