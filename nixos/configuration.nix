@@ -129,6 +129,9 @@
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
+  # Broser connector
+  services.gnome.gnome-browser-connector.enable = true;
+
   # Enable sound.
   # hardware.pulseaudio.enable = true;
   # OR
@@ -184,7 +187,7 @@
   ];
 
   programs.zsh.enable = true;
-
+  programs.firefox.enable = true;
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
