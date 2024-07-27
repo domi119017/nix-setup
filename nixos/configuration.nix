@@ -8,8 +8,14 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      <sops-nix/modules/sops>
     ];
 
+  sops.defaultSopsFile = ./secrets/secrets.yaml;
+  sops.age.keyFile = "/var/lib/sops-nix/key.txt";
+  sops.secrets.ssh_key = {};
+  sops.secrets.delta_passwd = {};
+  sops.secrets.admin_passwd = {};
 
   nixpkgs.config.allowUnfree = true;
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
