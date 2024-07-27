@@ -18,7 +18,7 @@
   ];
 
   # DOTFILES
-  home.file."${config.xdg.configHome}" = {
+  home.file."${config.home.homeDirectory}" = {
     source = ../nix-dotfiles;
     recursive = true;
   };
