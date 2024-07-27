@@ -58,7 +58,6 @@
         modules = [
           # > Our main nixos configuration file <
           ./nixos/configuration.nix
-          sops-nix.nixosModules.sops
         ];
       };
     };

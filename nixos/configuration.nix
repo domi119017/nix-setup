@@ -8,7 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      sops
+      inputs.sops-nix.nixosModules.sops
     ];
 
   sops.defaultSopsFile = ./secrets/secrets.yaml;
