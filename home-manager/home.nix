@@ -25,6 +25,15 @@
     ".oh-my-zsh" = {
       source = config.lib.file.mkOutOfStoreSymlink "/home/delta/nix-setup/nix-dotfiles/.oh-my-zsh";
     };
+    ".p10k.zsh" = {
+      source = config.lib.file.mkOutOfStoreSymlink "/home/delta/nix-setup/nix-dotfiles/.p10k.zsh";
+    };
+    "Pictures/Wallpapers" = {
+      source = config.lib.file.mkOutOfStoreSymlink "/home/delta/nix-setup/nix-dotfiles/Pictures/Wallpapers";
+    };
+    ".gitconfig" = {
+      source = config.lib.file.mkOutOfStoreSymlink "/home/delta/nix-setup/nix-dotfiles/.gitconfig";
+    };
   };
 
   # SESSION VARIABLES
