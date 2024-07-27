@@ -225,8 +225,8 @@
         };
       };
       gui = {
-        user = domi;
-        password = domi;
+        user = "domi";
+        password = "domi";
       };
     };
   };
