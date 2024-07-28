@@ -13,6 +13,7 @@
     gnomeExtensions.user-themes
     gnomeExtensions.vitals
     gnomeExtensions.tiling-assistant
+    gnomeExtensions.caffeine
     posy-cursors
     candy-icons
     dracula-theme
@@ -137,6 +138,7 @@
         "user-theme@gnome-shell-extensions.gcampax.github.com" 
         "Vitals@CoreCoding.com"
         "tiling-assistant@leleat-on-github"
+        "caffeine@patapon.info"
       ];
       favorite-apps = [ 
         "org.gnome.Nautilus.desktop" 
@@ -151,6 +153,12 @@
     };
     "org/gnome/shell/extensions/vitals"={
       position-in-panel= 0;
+    };
+    "org/gnome/shell/extensions/caffeine"={
+      indicator-position=0;
+      show-indicator="always";
+      show-timer=true;
+      show-notifications=false;
     };
     "org/gnome/Console"={
       use-system-font=false;
