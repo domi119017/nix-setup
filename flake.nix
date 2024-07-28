@@ -13,6 +13,8 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     # Sops
     sops-nix.url = "github:Mic92/sops-nix";
+    # NixOS hardware
+    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
   };
 
   outputs = {
@@ -20,6 +22,7 @@
     nixpkgs,
     home-manager,
     sops-nix,
+    nixos-hardware,
     ...
   } @ inputs: let
     inherit (self) outputs;
@@ -57,6 +60,7 @@
         specialArgs = {inherit inputs outputs;};
         modules = [
           # > Our main nixos configuration file <
+          nixos-hardware.nixosModules.microsoft-surface-go
           ./nixos/configuration.nix
         ];
       };
