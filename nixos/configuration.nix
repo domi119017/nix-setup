@@ -170,7 +170,7 @@
   programs.firefox.enable = true;
 
   # Waydroid
-  # virtualisation.waydroid.enable = true;
+  virtualisation.waydroid.enable = true;
 
   # List services that you want to enable:
 
