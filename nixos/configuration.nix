@@ -155,6 +155,7 @@
     lolcat
     openscad
     gnome-browser-connector
+    plantuml
   ];
   # Enable GNOME shell extensions management from Firefox.
   # nixpkgs.config.firefox.enableGnomeExtensions = true;
