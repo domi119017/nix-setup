@@ -60,7 +60,7 @@
         specialArgs = {inherit inputs outputs;};
         modules = [
           # > Our main nixos configuration file <
-          nixos-hardware.nixosModules.microsoft-surface-go
+          # nixos-hardware.nixosModules.microsoft-surface-go
           ./nixos/configuration.nix
         ];
       };
