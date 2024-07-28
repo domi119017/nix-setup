@@ -159,37 +159,6 @@
     };
   };
 
-  # # ZSH config
-  # programs.zsh = {
-  #   enable = true;
-  #   enableCompletion = true;
-  #   autosuggestion.enable = true;
-  #   syntaxHighlighting.enable = true;
-  #   # promptInit = "source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
-  #   shellAliases = {
-  #     ll = "ls -l";
-  #     la = "ls -la";
-  #     update = "sudo nixos-rebuild switch --flake ~/nix-setup#delta-surface";
-  #     update-home = "home-manager switch --flake ~/nix-setup#delta@delta-surface";
-  #     upnix = "cd ~/nix-setup; git pull && update && update-home && gnome-session-quit --logout --force --no-prompt;";
-  #     zrc = "nano ~/.zshrc";
-  #     hwk = "ssh pi@192.168.178.130";
-  #     opn = "ssh pi@192.168.178.81";
-  #     e = "exit";
-  #   };
-  
-  #   history = {
-  #     size = 10000;
-  #     path = "${config.xdg.dataHome}/zsh/history";
-  #   };
-  
-  #   oh-my-zsh = {
-  #     enable = true;
-  #     theme = "agnoster";
-  #     plugins = [ "git" ];
-  #   };
-  # };
-
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 }
