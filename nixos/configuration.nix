@@ -157,7 +157,7 @@
     libgcc
     gdb
     # Rust
-    rustup
+    # rustup
 
     # --- Nice to have --- #
 
@@ -175,7 +175,7 @@
     openscad
     # Notes #
     plantuml
-    texliveFull
+    # texliveFull - Download is really slow, disable for now todo: enable later to install overnight
     obsidian
 
     # - Microsoft surface - #
