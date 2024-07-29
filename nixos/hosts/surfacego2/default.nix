@@ -76,12 +76,12 @@
 
   # Enable sound.
   # Enable EITHER:
-  hardware.pulseaudio.enable = true;
+  # hardware.pulseaudio.enable = true;
   # OR:
   services.pipewire = {
     enable = true;
-    pulse.enable = true;
-    wireplumber.enable = false;
+    pulse.enable = false;
+    wireplumber.enable = true;
   };
 
     # Define a user account. Don't forget to set a password with ‘passwd’.
