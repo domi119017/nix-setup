@@ -56,6 +56,9 @@
     # NixOS configuration entrypoint
     # Available through 'nixos-rebuild --flake .#your-hostname'
     nixosConfigurations = {
+      # Linux-surface kernel:
+      # The build goes smoother if you cap it at 2GHz with:
+      #  cpupower frequency-set -u 2GHz
       delta-surface = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
         modules = [
