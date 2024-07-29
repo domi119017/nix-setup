@@ -79,7 +79,9 @@
   hardware.pulseaudio.enable = true;
   # OR:
   services.pipewire = {
-    enable = false;
+    enable = true;
+    pulse.enable = true;
+    wireplumber.enable = false;
   };
 
     # Define a user account. Don't forget to set a password with ‘passwd’.
