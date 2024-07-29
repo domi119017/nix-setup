@@ -34,12 +34,12 @@
   };
 
   # Enable sound.
-  # hardware.pulseaudio.enable = true;
+  hardware.pulseaudio.enable = true;
   # OR
-  services.pipewire = {
-    enable = true;
-    pulse.enable = false;
-  };
+  # services.pipewire = {
+  #   enable = true;
+  #   pulse.enable = false;
+  # };
 
   environment.systemPackages = with pkgs; [
     # --- Actually required --- #
