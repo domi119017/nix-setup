@@ -7,6 +7,7 @@
     zoxide
     bat
     thefuck
+    fzf
   ];
 
   fonts.packages = with pkgs; [
