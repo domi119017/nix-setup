@@ -1,13 +1,6 @@
 { config, pkgs, ... }:
 
 {
-  # USER
-  home.username = "delta";
-  home.homeDirectory = "/home/delta";
-
-  # DO NOT CHANGE, READ DOCS
-  home.stateVersion = "24.05"; # Please read the comment before changing.
-
   # HOME PACKAGES
   home.packages = with pkgs; [
     gnomeExtensions.user-themes
@@ -19,28 +12,11 @@
     dracula-theme
   ];
 
-  # DOTFILES
+  # Wallpaper
   home.file = {
-    ".zshrc" = {
-      source = config.lib.file.mkOutOfStoreSymlink "/home/delta/nix-setup/nix-dotfiles/.zshrc";
-    };
-    ".oh-my-zsh" = {
-      source = config.lib.file.mkOutOfStoreSymlink "/home/delta/nix-setup/nix-dotfiles/.oh-my-zsh";
-    };
-    ".p10k.zsh" = {
-      source = config.lib.file.mkOutOfStoreSymlink "/home/delta/nix-setup/nix-dotfiles/.p10k.zsh";
-    };
     "Pictures/Wallpapers" = {
       source = config.lib.file.mkOutOfStoreSymlink "/home/delta/nix-setup/nix-dotfiles/Pictures/Wallpapers";
     };
-    ".gitconfig" = {
-      source = config.lib.file.mkOutOfStoreSymlink "/home/delta/nix-setup/nix-dotfiles/.gitconfig";
-    };
-  };
-
-  # SESSION VARIABLES
-  home.sessionVariables = {
-    # EDITOR = "emacs";
   };
 
   # POSYS CURSOR
@@ -166,7 +142,4 @@
       audible-bell=false;
     };
   };
-
-  # Let Home Manager install and manage itself.
-  programs.home-manager.enable = true;
 }

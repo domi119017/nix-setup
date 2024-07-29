@@ -38,9 +38,9 @@
     # pass to it, with each system as an argument
     forAllSystems = nixpkgs.lib.genAttrs systems;
   in {
-    # Your custom packages
-    # Accessible through 'nix build', 'nix shell', etc
-    packages = forAllSystems (system: import ./pkgs nixpkgs.legacyPackages.${system});
+    # # Your custom packages
+    # # Accessible through 'nix build', 'nix shell', etc
+    # packages = forAllSystems (system: import ./pkgs nixpkgs.legacyPackages.${system});
     # Formatter for your nix files, available through 'nix fmt'
     # Other options beside 'alejandra' include 'nixpkgs-fmt'
     formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.alejandra);
@@ -64,7 +64,7 @@
         modules = [
           # > Our main nixos configuration file <
           nixos-hardware.nixosModules.microsoft-surface-go
-          ./nixos/configuration.nix
+          ./nixos/hosts/surfacego2
         ];
       };
     };
@@ -77,7 +77,7 @@
         extraSpecialArgs = {inherit inputs outputs;};
         modules = [
           # > Our main home-manager configuration file <
-          ./home-manager/home.nix
+          ./home/delta.nix
         ];
       };
     };
