@@ -146,7 +146,7 @@
     tree
     home-manager
     # zsh
-    zsh-powerlevel10k
+    # zsh-powerlevel10k
     gnome3.gnome-tweaks
     obsidian
     sops
@@ -158,6 +158,8 @@
     openscad
     gnome-browser-connector
     plantuml
+    surface-control
+    libinput
   ];
   # Enable GNOME shell extensions management from Firefox.
   # nixpkgs.config.firefox.enableGnomeExtensions = true;
