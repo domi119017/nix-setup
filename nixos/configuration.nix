@@ -148,7 +148,7 @@
 
     # --- Coding --- #
     # General
-    make
+    gnumake
     # Python
     python3
     pipx
