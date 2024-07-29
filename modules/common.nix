@@ -50,6 +50,9 @@
     htop
     sops
     home-manager
+    # for nh
+    nix-output-monitor
+    nvd
   ];
 
   programs.zsh.enable = true;
