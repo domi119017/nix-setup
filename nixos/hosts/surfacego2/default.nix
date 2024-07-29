@@ -15,6 +15,7 @@
       ../../../modules/openssh.nix
       ../../../modules/syncthing.nix
       ../../../modules/tty.nix
+      ../../../modules/gui.nix
       ../../../modules/waydroid.nix
     ];
 
