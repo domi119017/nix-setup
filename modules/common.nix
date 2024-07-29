@@ -33,14 +33,6 @@
     useXkbConfig = true; # use xkb.options in tty.
   };
 
-  # Enable sound.
-  hardware.pulseaudio.enable = true;
-  # OR
-  # services.pipewire = {
-  #   enable = true;
-  #   pulse.enable = false;
-  # };
-
   environment.systemPackages = with pkgs; [
     # --- Actually required --- #
     vim # Or some other terminal editor
