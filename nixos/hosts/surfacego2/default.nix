@@ -70,6 +70,7 @@
     # - Microsoft surface - #
     surface-control
     libinput
+    libcamera
   ];
 
     # Define a user account. Don't forget to set a password with ‘passwd’.
