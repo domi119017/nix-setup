@@ -126,7 +126,6 @@
     isNormalUser = true;
     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
     packages = with pkgs; [
-      vscode
     ];
     shell = pkgs.zsh;
     openssh.authorizedKeys.keys = [
@@ -137,29 +136,47 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-    bat
+    # --- Actually required --- #
+
+    vim # Or some other terminal editor
+    nano # Or some other terminal editor
     git
     wget
     htop
-    # firefox
-    tree
-    home-manager
-    # zsh
-    # zsh-powerlevel10k
-    gnome3.gnome-tweaks
-    obsidian
     sops
+    home-manager
+
+    # --- Nice to have --- #
+
+    # - Terminal - #
+    tree
+    zoxide
+    bat
     thefuck
-    syncthing
-    fortune
-    cowsay
-    lolcat
-    openscad
+
+    # - Gnome - #
+    gnome3.gnome-tweaks
     gnome-browser-connector
-    plantuml
+
+    # - Microsoft surface - #
     surface-control
     libinput
+
+    # Syncthing
+    syncthing
+
+    # - Graphical -
+    openscad
+    # Notes
+    plantuml
+    texliveFull
+    obsidian
+
+    # - Delta -
+    cowsay
+    fortune
+    lolcat
+    vscode
   ];
   # Enable GNOME shell extensions management from Firefox.
   # nixpkgs.config.firefox.enableGnomeExtensions = true;
