@@ -59,7 +59,7 @@
       # Linux-surface kernel:
       # The build goes smoother if you cap it at 2GHz with:
       #  cpupower frequency-set -u 2GHz
-      delta-surface = nixpkgs.lib.nixosSystem {
+      surfacego2 = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
         modules = [
           # > Our main nixos configuration file <
@@ -72,7 +72,7 @@
     # Standalone home-manager configuration entrypoint
     # Available through 'home-manager --flake .#your-username@your-hostname'
     homeConfigurations = {
-      "delta@delta-surface" = home-manager.lib.homeManagerConfiguration {
+      "delta@surfacego2" = home-manager.lib.homeManagerConfiguration {
         pkgs = import nixpkgs { system = "x86_64-linux"; config = { allowUnfree = true; }; };
         extraSpecialArgs = {inherit inputs outputs;};
         modules = [
