@@ -146,6 +146,19 @@
     sops
     home-manager
 
+    # --- Coding --- #
+    # General
+    make
+    # Python
+    python3
+    pipx
+    virtualenv
+    # C/C++
+    libgcc
+    gdb
+    # Rust
+    rustup
+
     # --- Nice to have --- #
 
     # - Terminal - #
@@ -158,25 +171,25 @@
     gnome3.gnome-tweaks
     gnome-browser-connector
 
-    # - Microsoft surface - #
-    surface-control
-    libinput
-
-    # Syncthing
-    syncthing
-
-    # - Graphical -
+    # - Graphical - #
     openscad
-    # Notes
+    # Notes #
     plantuml
     texliveFull
     obsidian
 
-    # - Delta -
+    # - Microsoft surface - #
+    surface-control
+    libinput
+
+    # - Delta - #
     cowsay
     fortune
     lolcat
     vscode
+
+    # - Syncthing - #
+    syncthing
   ];
   # Enable GNOME shell extensions management from Firefox.
   # nixpkgs.config.firefox.enableGnomeExtensions = true;
