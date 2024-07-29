@@ -12,6 +12,13 @@
     dracula-theme
   ];
 
+  # Wallpaper
+  home.file = {
+    "Pictures/Wallpapers" = {
+      source = config.lib.file.mkOutOfStoreSymlink "/home/delta/nix-setup/nix-dotfiles/Pictures/Wallpapers";
+    };
+  };
+
   # POSYS CURSOR
   home.pointerCursor = {
     name = "Posy_Cursor_Black";
