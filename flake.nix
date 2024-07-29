@@ -64,7 +64,7 @@
         modules = [
           # > Our main nixos configuration file <
           nixos-hardware.nixosModules.microsoft-surface-go
-          ./nixos/configuration.nix
+          ./nixos/hosts/surfacego2
         ];
       };
     };
@@ -77,7 +77,7 @@
         extraSpecialArgs = {inherit inputs outputs;};
         modules = [
           # > Our main home-manager configuration file <
-          ./home-manager/home.nix
+          ./home/delta.nix
         ];
       };
     };
