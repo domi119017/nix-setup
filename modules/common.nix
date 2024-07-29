@@ -38,7 +38,7 @@
   # OR
   services.pipewire = {
     enable = true;
-    pulse.enable = true;
+    pulse.enable = false;
   };
 
   environment.systemPackages = with pkgs; [
