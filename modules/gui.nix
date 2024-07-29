@@ -6,7 +6,7 @@
     openscad
     # Notes #
     plantuml
-    # texliveFull # Download is really slow, disable for now. todo: enable later to install overnight
+    texliveFull # Download is really slow, disable for now. todo: enable later to install overnight
     obsidian
   ];
 }
