@@ -10,6 +10,7 @@
     pipx
     virtualenv
     # C/C++
+    gcc
     libgcc
     gdb
     # Rust
