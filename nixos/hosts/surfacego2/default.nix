@@ -19,19 +19,19 @@
       ../../../modules/waydroid.nix
     ];
 
-  # sops.defaultSopsFile = ../secrets/secrets.yaml;
-  # sops.defaultSopsFormat = "yaml";
+  sops.defaultSopsFile = ../../../secrets/secrets.yaml;
+  sops.defaultSopsFormat = "yaml";
 # 
-  # sops.age.keyFile = "/home/delta/.config/sops/age/keys.txt";
+  sops.age.keyFile = "/home/delta/.config/sops/age/keys.txt";
 # 
-  # sops.secrets = {
-    # ssh_key = {};
-    # delta_passwd = {};
-    # admin_passwd = {};
-    # hawking_st_id = {};
-    # st_passwd = {};
-    # st_username = {};
-  # };
+  sops.secrets = {
+    ssh_key = {};
+    delta_passwd = {};
+    admin_passwd = {};
+    hawking_st_id = {};
+    st_passwd = {};
+    st_username = {};
+  };
 # 
   # sops.templates = {
     # "ssh_key".content = ''${config.sops.placeholder.ssh_key}'';
