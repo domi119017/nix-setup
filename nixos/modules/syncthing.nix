@@ -33,7 +33,6 @@
       };
       gui = {
         user = "domi";
-        password = "domi";
       };
     };
   };
