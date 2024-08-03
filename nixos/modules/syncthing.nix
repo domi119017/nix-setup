@@ -42,4 +42,21 @@
     # - Syncthing - #
     syncthing
   ];
+
+  systemd.services.syncthing.serviceConfig.ExecStartPre =
+    let
+      cfg = config.services.syncthing;
+      syncthing-set-password = pkgs.writeShellScriptBin "syncthing-set-password" ''
+        PASSWORD="$(cat ${config.sops.secrets.st_passwd.path})"
+        ${cfg.package}/bin/syncthing generate \
+          --config=${cfg.configDir} \
+          --gui-user=${cfg.user} \
+          --gui-password="$PASSWORD" \
+          ${lib.escapeShellArgs cfg.extraFlags}
+      '';
+    in
+    if (cfg.cert != null || cfg.key != null) then
+      abort "Cert or key manually set for syncthing, so overriding execstart pre is not safe! Compare with ExecStartPre in nixpkgs to see what needs to be done."
+    else
+      lib.mkForce "${syncthing-set-password}/bin/syncthing-set-password";
 }
