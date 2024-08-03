@@ -9,9 +9,4 @@
     thefuck
     fzf
   ];
-
-  fonts.packages = with pkgs; [
-    # Jet Brains Mono NF
-    (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
-  ];
 }

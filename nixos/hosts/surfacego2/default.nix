@@ -16,7 +16,6 @@
       ../../../modules/syncthing.nix
       ../../../modules/tty.nix
       # ../../../modules/notes.nix
-      ../../../modules/waydroid.nix
 
       # Sops
       inputs.sops-nix.nixosModules.sops

@@ -29,5 +29,11 @@
     gnome-browser-connector
   ];
 
+
+  fonts.packages = with pkgs; [
+    # Jet Brains Mono NF
+    (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+  ];
+
   programs.firefox.enable = true;
 }
