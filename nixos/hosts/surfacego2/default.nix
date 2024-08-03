@@ -14,6 +14,7 @@
       ../../modules/openssh.nix
       ../../modules/syncthing.nix
       ../../modules/tty.nix
+      ../../modules/gaming.nix
       # ../../modules/notes.nix
 
       # Sops
