@@ -10,7 +10,7 @@
       ./hardware-configuration.nix
       # inputs.sops-nix.nixosModules.sops
       ../../../modules/common.nix
-      ../../../modules/coding.nix
+      ../../../home/modules/coding.nix
       ../../../modules/gnome.nix
       ../../../modules/openssh.nix
       ../../../modules/syncthing.nix
@@ -71,7 +71,7 @@
     surface-control
     libinput
     libcamera
-    pulseaudio
+    # pulseaudio
   ];
 
   # Enable sound.
