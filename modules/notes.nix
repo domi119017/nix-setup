@@ -2,8 +2,7 @@
 
 {
   environment.systemPackages = with pkgs; [
-    # - Graphical - #
-    openscad
+
     # Notes #
     plantuml
     texliveFull 

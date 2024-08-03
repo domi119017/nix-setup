@@ -21,7 +21,6 @@
     cowsay
     fortune
     lolcat
-    vscode
   ];
 
   # DOTFILES

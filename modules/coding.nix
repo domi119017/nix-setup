@@ -15,5 +15,8 @@
     gdb
     # Rust
     rustup
+    # - Graphical - #
+    openscad
+    vscode
   ];
 }
