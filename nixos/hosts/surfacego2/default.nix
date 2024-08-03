@@ -10,7 +10,7 @@
       ./hardware-configuration.nix
       # inputs.sops-nix.nixosModules.sops
       ../../../modules/common.nix
-      ../../../home/modules/coding.nix
+      # ../../../modules/coding.nix
       ../../../modules/gnome.nix
       ../../../modules/openssh.nix
       ../../../modules/syncthing.nix

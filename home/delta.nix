@@ -4,6 +4,7 @@
   imports = [
     # Include gnome stuff
     ./modules/gnome.nix
+    ./modules/coding.nix
   ];
 
   # USER
