@@ -9,13 +9,13 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       # inputs.sops-nix.nixosModules.sops
-      ../../../modules/common.nix
-      # ../../../modules/coding.nix
-      ../../../modules/gnome.nix
-      ../../../modules/openssh.nix
-      ../../../modules/syncthing.nix
-      ../../../modules/tty.nix
-      # ../../../modules/notes.nix
+      ../../modules/common.nix
+      # ../../modules/coding.nix
+      ../../modules/gnome.nix
+      ../../modules/openssh.nix
+      ../../modules/syncthing.nix
+      ../../modules/tty.nix
+      # ../../modules/notes.nix
 
       # Sops
       inputs.sops-nix.nixosModules.sops
