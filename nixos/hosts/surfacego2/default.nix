@@ -15,7 +15,7 @@
       ../../../modules/openssh.nix
       ../../../modules/syncthing.nix
       ../../../modules/tty.nix
-      ../../../modules/gui.nix
+      # ../../../modules/notes.nix
       ../../../modules/waydroid.nix
 
       # Sops
