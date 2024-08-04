@@ -143,5 +143,8 @@
       custom-font="JetBrainsMonoNL Nerd Font Mono 10";
       audible-bell=false;
     };
+    "org/gnome/mutter"={
+      experimental-features="['scale-monitor-framebuffer']";
+    };
   };
 }
