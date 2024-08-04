@@ -24,16 +24,16 @@
   # DOTFILES
   home.file = {
     ".zshrc" = {
-      source = config.lib.file.mkOutOfStoreSymlink "../nix-dotfiles/.zshrc-minimal";
+      source = config.lib.file.mkOutOfStoreSymlink /home/yannic/nix-setup/nix-dotfiles/.zshrc-minimal;
     };
     ".oh-my-zsh" = {
-      source = config.lib.file.mkOutOfStoreSymlink "../nix-dotfiles/.oh-my-zsh";
+      source = config.lib.file.mkOutOfStoreSymlink /home/yannic/nix-setup/nix-dotfiles/.oh-my-zsh;
     };
     ".p10k.zsh" = {
-      source = config.lib.file.mkOutOfStoreSymlink "../nix-dotfiles/.p10k.zsh";
+      source = config.lib.file.mkOutOfStoreSymlink /home/yannic/nix-setup/nix-dotfiles/.p10k.zsh;
     };
     ".gitconfig" = {
-      source = config.lib.file.mkOutOfStoreSymlink "../nix-dotfiles/.gitconfig";
+      source = config.lib.file.mkOutOfStoreSymlink /home/yannic/nix-setup/nix-dotfiles/.gitconfig;
     };
   };
 
