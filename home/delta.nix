@@ -27,16 +27,16 @@
   # DOTFILES
   home.file = {
     ".zshrc" = {
-      source = config.lib.file.mkOutOfStoreSymlink "/home/delta/nix-setup/nix-dotfiles/.zshrc";
+      source = config.lib.file.mkOutOfStoreSymlink "../nix-dotfiles/.zshrc";
     };
     ".oh-my-zsh" = {
-      source = config.lib.file.mkOutOfStoreSymlink "/home/delta/nix-setup/nix-dotfiles/.oh-my-zsh";
+      source = config.lib.file.mkOutOfStoreSymlink "../nix-dotfiles/.oh-my-zsh";
     };
     ".p10k.zsh" = {
-      source = config.lib.file.mkOutOfStoreSymlink "/home/delta/nix-setup/nix-dotfiles/.p10k.zsh";
+      source = config.lib.file.mkOutOfStoreSymlink "../nix-dotfiles/.p10k.zsh";
     };
     ".gitconfig" = {
-      source = config.lib.file.mkOutOfStoreSymlink "/home/delta/nix-setup/nix-dotfiles/.gitconfig";
+      source = config.lib.file.mkOutOfStoreSymlink "../nix-dotfiles/.gitconfig";
     };
   };
 
