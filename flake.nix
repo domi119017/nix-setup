@@ -87,6 +87,14 @@
           ./home/delta.nix
         ];
       };
+      "delta@domipc" = home-manager.lib.homeManagerConfiguration {
+        pkgs = import nixpkgs { system = "x86_64-linux"; config = { allowUnfree = true; }; };
+        extraSpecialArgs = {inherit inputs outputs;};
+        modules = [
+          # > Our main home-manager configuration file <
+          ./home/delta.nix
+        ];
+      };
     };
   };
 }
