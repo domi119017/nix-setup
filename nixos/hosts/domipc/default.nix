@@ -117,7 +117,6 @@
     packages = with pkgs; [
     ];
     shell = pkgs.zsh;
-    # Der ist von DomiPC, bringt also nix
     openssh.authorizedKeys.keys = [
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIITQESNC4zlSNaAVfwELko0C4pfsEHgMzS9m0NqEyPeY delta@surfacego2"
     ];
