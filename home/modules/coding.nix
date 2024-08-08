@@ -18,5 +18,6 @@
     # - Graphical - #
     openscad
     vscode
+    godot_4
   ];
 }
