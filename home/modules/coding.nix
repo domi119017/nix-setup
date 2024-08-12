@@ -19,5 +19,6 @@
     openscad
     vscode
     godot_4
+    ghidra
   ];
 }
