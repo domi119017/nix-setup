@@ -11,6 +11,7 @@
     posy-cursors
     candy-icons
     dracula-theme
+    spotify
   ];
 
   # Wallpaper
