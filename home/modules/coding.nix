@@ -19,7 +19,7 @@
     openscad
     vscode
     ghidra
-    # Gamedev
+    # Gamedev # TODO: move to separate gameev config
     aseprite
     godot_4
     blender
