@@ -18,7 +18,10 @@
     # - Graphical - #
     openscad
     vscode
-    godot_4
     ghidra
+    # Gamedev
+    aseprite
+    godot_4
+    blender
   ];
 }
