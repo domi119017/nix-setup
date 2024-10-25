@@ -6,7 +6,7 @@
     ./modules/gnome.nix
     ./modules/coding.nix
     ./modules/notes.nix
-    ./modules/gaming.nix
+    # ./modules/gaming.nix
     ./modules/gamedev.nix
   ];
 
