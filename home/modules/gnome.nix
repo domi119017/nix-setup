@@ -7,7 +7,7 @@
     gnomeExtensions.vitals
     gnomeExtensions.tiling-assistant
     gnomeExtensions.caffeine
-    gnomeExtensions.smart-auto-move
+    # gnomeExtensions.smart-auto-move
     posy-cursors
     candy-icons
     dracula-theme
@@ -117,7 +117,7 @@
         "Vitals@CoreCoding.com"
         "tiling-assistant@leleat-on-github"
         "caffeine@patapon.info"
-        "smart-auto-move@khimaros.com"
+        # "smart-auto-move@khimaros.com"
       ];
       favorite-apps = [ 
         "org.gnome.Nautilus.desktop" 
